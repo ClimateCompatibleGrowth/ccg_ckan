@@ -1,0 +1,8 @@
+# Log files
+*.log
+
+# Deb packages
+*.deb
+
+# Environment files
+.env
