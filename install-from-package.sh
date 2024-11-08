@@ -93,7 +93,7 @@ initialise_solr() {
             sudo docker rm ckan-solr
         fi
         
-        sudo docker run --name ckan-solr -p 8983:8983 -d ckan/ckan-solr:2.10-solr9
+        sudo docker run --name ckan-solr -p 8983:8983 --restart unless-stopped -d ckan/ckan-solr:2.10-solr9
         
         # Wait until the container is running
         while [ -z "$(sudo docker ps -q -f name=ckan-solr)" ]; do
