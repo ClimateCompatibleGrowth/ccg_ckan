@@ -33,7 +33,7 @@ This guide helps you install CKAN 2.11 automatically using the `install-from-pac
     ./install-from-package.sh
     ```
 
-**Warning:** Running this script will uninstall the current CKAN installation and drop the corresponding databases and roles.
+**Warning⚠️:** Running this script will uninstall the current CKAN installation and drop the corresponding databases and roles.
 
 ### Logging
 
@@ -46,8 +46,6 @@ If the installation fails, the script will automatically clean up by stopping se
 ### Post-Installation
 
 After the installation completes, the following steps are performed:
-- Dependencies are installed.
-- The CKAN package is downloaded and installed.
 - PostgreSQL databases and roles are set up.
 - CKAN directories and permissions are configured.
 - The CKAN configuration file is updated.
