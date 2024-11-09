@@ -2,7 +2,13 @@
 
 LOGFILE="/var/log/ckan/install.log"
 
-source .env
+# Load environment variables
+if [ -f .env ]; then
+    source .env
+else
+    echo "Error: .env file not found, please set this up first as per the README"
+    exit 1
+fi
 
 set -e
 
