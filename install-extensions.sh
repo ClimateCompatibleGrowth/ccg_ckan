@@ -87,9 +87,7 @@ setup_xloader(){
     
     . /usr/lib/ckan/default/bin/activate
     
-    # Set permissions
-    sudo chown -R $USER /usr/lib/ckan/default/lib/
-    sudo chown -R $USER /usr/lib/ckan/default/bin/
+    sudo chown -R $USER /usr/lib/ckan/
     
     pip install ckanext-xloader
     pip install -r https://raw.githubusercontent.com/ckan/ckanext-xloader/master/requirements.txt
@@ -129,8 +127,7 @@ setup_excelforms() {
     echo "Setting up Excel Forms extension..."
     . /usr/lib/ckan/default/bin/activate
 
-    sudo chown -R $USER /usr/lib/ckan/default/lib/
-    sudo chown -R $USER /usr/lib/ckan/default/bin/
+    sudo chown -R $USER /usr/lib/ckan/
     
     git clone https://github.com/ckan/ckanext-excelforms.git
     cd ckanext-excelforms
@@ -143,8 +140,7 @@ setup_charts() {
     echo "Setting up Charts extension..."
     . /usr/lib/ckan/default/bin/activate
 
-    sudo chown -R $USER /usr/lib/ckan/default/lib/
-    sudo chown -R $USER /usr/lib/ckan/default/bin/
+    sudo chown -R $USER /usr/lib/ckan/
 
     cd ..
     git clone https://github.com/DataShades/ckanext-charts.git
@@ -157,6 +153,8 @@ setup_charts() {
 setup_pdfview() {
     echo "Setting up PDF viewer extension..."
     . /usr/lib/ckan/default/bin/activate
+
+    sudo chown -R $USER /usr/lib/ckan/
     
     pip install ckanext-pdfview
     
@@ -166,6 +164,8 @@ setup_pdfview() {
 setup_ckanapi() {
     echo "Setting up CKAN API extension..."
     . /usr/lib/ckan/default/bin/activate
+
+    sudo chown -R $USER /usr/lib/ckan/
     
     pip install ckanapi
     
@@ -239,7 +239,7 @@ main() {
     
     set -e
     
-    check_env_vars || exit 1\
+    check_env_vars || exit 1
     setup_ckanapi || exit 1
     setup_datastore || exit 1
     setup_email_settings || exit 1
