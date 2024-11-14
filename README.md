@@ -75,7 +75,7 @@ Upon successful installation, the process will automatically:
 
 ## Installing Extensions 🧩
 
-CKAN extensions can be installed after the core installation is complete to add additional features and enhance functionality. Use the `install-extensions.sh` script for a streamlined setup.
+CKAN extensions can be installed after the core installation is complete to add additional features and enhance functionality. Use the `install-extensions.sh` script for a streamlined setup. Before installing the extensions, log into the CKAN sysadmin to generate an API key which would be used by some of the extensions for authentification. 
 
 ### Steps for Installing Extensions
 
